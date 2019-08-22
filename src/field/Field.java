@@ -4,12 +4,14 @@ import java.util.ArrayList;
 
 import cell.Cell;
 
-public class Field {
+public class Field 
+{
 	private int width;
 	private int height;
 	private Cell[][] field;
 	
-	public Field(int width, int height) {
+	public Field(int width, int height) 
+	{
 		this.width = width;
 		this.height = height;
 		field = new Cell[height][width];
@@ -18,17 +20,20 @@ public class Field {
 	public int getWidth() { return width; }
 	public int getHeight() { return height; }
 	
-	public Cell place(int row, int col, Cell o) {
+	public Cell place(int row, int col, Cell o) 
+	{
 		Cell ret = field[row][col];
 		field[row][col] = o;
 		return ret;
 	}
 	
-	public Cell get(int row, int col) {
+	public Cell get(int row, int col) 
+	{
 		return field[row][col];
 	}
 	
-	public Cell[] getNeighbour(int row, int col) {
+	public Cell[] getNeighbour(int row, int col) 
+	{
 		ArrayList<Cell> list = new ArrayList<Cell>();
 		for ( int i=-1; i<2; i++ ) {
 			for ( int j=-1; j<2; j++ ) {
@@ -42,11 +47,12 @@ public class Field {
 		return list.toArray(new Cell[list.size()]);
 	}
 	
-	public void clear() {
-		for ( int i=0; i<height; i++ ) {
-			for ( int j=0; j<width; j++ ) {
-				field[i][j] = null;
-			}
+	public void clear() 
+	{
+		for ( int i=0; i<height; i++ ) 
+		{
+			for ( int j=0; j<width; j++ ) 
+			{	field[i][j] = null;	}
 		}
 	}
 }

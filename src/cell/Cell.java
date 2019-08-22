@@ -14,8 +14,6 @@ public class Cell
 	{
 		g.drawRect(x, y, size, size);
 		if ( alive ) 
-		{
-			g.fillRect(x, y, size, size);
-		}
+		{	g.fillRect(x, y, size, size);	}
 	}
 }
