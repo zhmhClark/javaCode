@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - View",
+            "request": "launch",
+            "mainClass": "field.View"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - CellMachine",
+            "request": "launch",
+            "mainClass": "cellmachine.CellMachine"
+        }
+    ]
+}
